@@ -255,8 +255,8 @@ def write_summary_md(out_dir, time_row, conc_row, time_metric, conc_metric, copi
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--time_dir", type=str, default="time")
-    parser.add_argument("--conc_dir", type=str, default="conc")
+    parser.add_argument("--time_dir", type=str, default="time_model")
+    parser.add_argument("--conc_dir", type=str, default="concentration_model")
     parser.add_argument("--time_search_csv", type=str, default="search_time_results/all_trials.csv")
     parser.add_argument("--conc_search_csv", type=str, default="search_conc_results/all_trials.csv")
     parser.add_argument("--out_dir", type=str, default="final_dual_model")

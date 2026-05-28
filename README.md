@@ -56,6 +56,10 @@ Convert RUPTURA output files into:
 
 `curve_dataset.csv` contains the 24 simulation/input descriptors. `curve.csv` contains 100 time points plus 100 C1 and 100 C2 concentration values.
 
+```bash
+python data_processing/get_curve.py break_binary --filtered_csv filtered_result_new.csv --out_x_csv curve_dataset.csv --out_y_csv curve.csv
+```
+
 ### 5. Clean abnormal simulations
 
 ```bash
@@ -99,7 +103,7 @@ python random_search_conc.py --trials 8 --epochs 500
 After model search, use:
 
 ```bash
-python analysis/export_best_dual_model.py
+python analysis/export_best_dual_model.py --time_dir time_model --conc_dir concentration_model
 python analysis/plot_final_dual_curves.py --final_dir final_dual_model --x_csv curve_dataset_clean.csv --y_csv curve_clean.csv
 ```
 
